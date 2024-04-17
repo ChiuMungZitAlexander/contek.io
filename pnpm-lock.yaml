@@ -15,8 +15,8 @@ dependencies:
     specifier: ^6.1.2
     version: 6.1.2(postcss@8.4.38)
   flowbite-react:
-    specifier: ^0.8.0
-    version: 0.8.0(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3)
+    specifier: ^0.9.0
+    version: 0.9.0(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3)
   next:
     specifier: 14.2.0
     version: 14.2.0(react-dom@18.2.0)(react@18.2.0)
@@ -2363,8 +2363,8 @@ packages:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==}
     dev: true
 
-  /flowbite-react@0.8.0(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3):
-    resolution: {integrity: sha512-sd9Atj2l4rfxXqyayaEl+lBNPmBsbc4n+RxFtlsrCeYYB0wzY5qYiQWMaaFjKOIHHksxSndBtb2x0Jv/Y1jkrg==}
+  /flowbite-react@0.9.0(react-dom@18.2.0)(react@18.2.0)(tailwindcss@3.4.3):
+    resolution: {integrity: sha512-wRGzTPHaEuRSXiAFhdTuksezABE/AjI/iyOOBGZpsFAz/sq7zuorAqjRud9FWgy3TlFPtldl7kL93wNY2nOnKQ==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
