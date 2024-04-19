@@ -31,7 +31,7 @@ dependencies:
     version: 9.0.1(@types/react@18.2.77)(react@18.2.0)
   tailwind-merge:
     specifier: ^2.2.2
-    version: 2.2.2
+    version: 2.3.0
 
 devDependencies:
   '@commitlint/cli':
@@ -4697,6 +4697,12 @@ packages:
 
   /tailwind-merge@2.2.2:
     resolution: {integrity: sha512-tWANXsnmJzgw6mQ07nE3aCDkCK4QdT3ThPMCzawoYA2Pws7vSTCvz3Vrjg61jVUGfFZPJzxEP+NimbcW+EdaDw==}
+    dependencies:
+      '@babel/runtime': 7.24.4
+    dev: false
+
+  /tailwind-merge@2.3.0:
+    resolution: {integrity: sha512-vkYrLpIP+lgR0tQCG6AP7zZXCTLc1Lnv/CCRT3BqJ9CZ3ui2++GPaGb1x/ILsINIMSYqqvrpqjUFsMNLlW99EA==}
     dependencies:
       '@babel/runtime': 7.24.4
     dev: false
