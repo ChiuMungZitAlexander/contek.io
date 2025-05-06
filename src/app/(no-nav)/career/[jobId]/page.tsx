@@ -1,15 +1,15 @@
 import { type Metadata } from 'next';
 import Link from 'next/link';
-import Markdown from 'react-markdown';
 
 import { Button } from '@/components/button';
 import { JobsResponse } from '@/components/career/types';
 import { Container } from '@/components/layout/container';
+import { Markdown } from '@/components/markdown';
 import { APITABLE_CAREER_URL } from '@/consts/url';
 import { APPLY_FORM_URL } from '@/consts/url';
 
 interface IGenerateMetadata {
-  params: { jobId: string };
+  params: Promise<{ jobId: string }>;
 }
 
 const getJobDetails = async (jobId: string) => {
@@ -33,7 +33,8 @@ const getJobDetails = async (jobId: string) => {
   return job;
 };
 
-export const generateMetadata = async ({ params }: IGenerateMetadata): Promise<Metadata> => {
+export const generateMetadata = async (props: IGenerateMetadata): Promise<Metadata> => {
+  const params = await props.params;
   const job = await getJobDetails(params.jobId);
 
   return {
@@ -41,7 +42,9 @@ export const generateMetadata = async ({ params }: IGenerateMetadata): Promise<M
   };
 };
 
-const JobDetails = async ({ params }: IGenerateMetadata) => {
+const JobDetails = async (props: IGenerateMetadata) => {
+  const params = await props.params;
+
   try {
     const job = await getJobDetails(params.jobId);
 

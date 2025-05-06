@@ -1,6 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@plugin "@tailwindcss/typography";
+@plugin 'flowbite-react/plugin/tailwindcss';
+
+@source '../../.flowbite-react/class-list.json';
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-tablet: 375px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-laptop: 992px;
+  --breakpoint-desktop: 1440px;
+}
 
 :root {
   --contek-max-width: 1440px;
@@ -13,7 +24,7 @@
 }
 
 /* @media (prefers-color-scheme: dark) {
-  :root {
+  :root { 
 
   }
 } */

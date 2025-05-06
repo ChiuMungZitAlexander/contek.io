@@ -1,6 +1,6 @@
 'use client';
 
-import { Modal } from 'flowbite-react';
+import { Modal, ModalBody } from 'flowbite-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -54,12 +54,12 @@ export const Header = () => {
 
   return (
     <header>
-      <Container className="flex h-[92px] max-w-[--contek-max-width] items-center justify-between">
+      <Container className="flex h-[92px] max-w-(--contek-max-width) items-center justify-between">
         <Link href="/">
           <Image src="/logo.svg" alt="contek logo" width={132} height={26} />
         </Link>
         {pathname === '/' && (
-          <nav className="hidden gap-8 text-lg font-medium text-[#A9ACAC] transition tablet:flex">
+          <nav className="tablet:flex hidden gap-8 text-lg font-medium text-[#A9ACAC] transition">
             <Link className="hover:opacity-80" href="#about-us">
               About us
             </Link>
@@ -71,7 +71,7 @@ export const Header = () => {
             </Link>
             <Link className="relative hover:opacity-80" href={CONTEK_LINKEDIN_URL} target="_blank">
               LinkedIn
-              <span className="absolute -right-2 top-0">
+              <span className="absolute top-0 -right-2">
                 <svg
                   width="8"
                   height="8"
@@ -91,7 +91,7 @@ export const Header = () => {
           </nav>
         )}
         <div
-          className="cursor-pointer transition hover:opacity-80 tablet:hidden"
+          className="tablet:hidden cursor-pointer transition hover:opacity-80"
           onClick={() => setModalOpen(true)}
         >
           <BurgerIcon />
@@ -99,11 +99,11 @@ export const Header = () => {
       </Container>
 
       <Modal
-        className="tablet:hidden [&>div[role='dialog']>div]:h-full [&>div[role='dialog']>div]:max-h-full [&>div[role='dialog']>div]:rounded-none [&>div[role='dialog']>div]:bg-[#111] [&>div[role='dialog']]:p-0"
+        className="tablet:hidden [&>div[role='dialog']]:p-0 [&>div[role='dialog']>div]:h-full [&>div[role='dialog']>div]:max-h-full [&>div[role='dialog']>div]:rounded-none [&>div[role='dialog']>div]:bg-[#111]"
         onClose={() => setModalOpen(false)}
         show={modalOpen}
       >
-        <Modal.Body className="flex flex-col gap-8 px-[--contek-padding-x-mobile] py-8">
+        <ModalBody className="flex flex-col gap-8 px-(--contek-padding-x-mobile) py-8">
           <div className="flex h-[28px] items-center justify-between">
             <Link href="/">
               <Image src="/logo.svg" alt="contek logo" width={132} height={26} />
@@ -115,7 +115,7 @@ export const Header = () => {
               <CloseIcon />
             </span>
           </div>
-          <nav className="flex grow flex-col items-center justify-center gap-12 text-center text-[48px] font-semibold leading-[52px] text-white">
+          <nav className="flex grow flex-col items-center justify-center gap-12 text-center text-[48px] leading-[52px] font-semibold text-white">
             <Link className="hover:opacity-80" href="#about-us" onClick={() => setModalOpen(false)}>
               About us
             </Link>
@@ -132,7 +132,7 @@ export const Header = () => {
               target="_blank"
             >
               LinkedIn
-              <span className="absolute -right-8 top-0">
+              <span className="absolute top-0 -right-8">
                 <svg
                   width="24"
                   height="24"
@@ -150,7 +150,7 @@ export const Header = () => {
               </span>
             </Link>
           </nav>
-        </Modal.Body>
+        </ModalBody>
       </Modal>
     </header>
   );
