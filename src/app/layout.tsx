@@ -1,4 +1,3 @@
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import type { ReactNode } from 'react';
@@ -8,7 +7,7 @@ import { Header } from '@/components/header';
 
 import './globals.css';
 
-const font = localFont({ src: '../public/fonts/Figtree-Regular.ttf' });
+const font = localFont({ src: '../../public/fonts/Figtree-Regular.ttf' });
 
 export const runtime = 'edge';
 
@@ -28,7 +27,6 @@ const RootLayout = ({
       <link rel="icon" href="/favicon.ico" sizes="any" />
     </head>
     <body className={font.className}>
-      <SpeedInsights />
       <Header />
       {children}
       <Footer />

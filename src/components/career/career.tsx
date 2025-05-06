@@ -12,7 +12,7 @@ const Job = ({ job }: { job: JobRecord }) => (
   <div className="flex flex-col gap-8 bg-[#FFF] p-10 text-left">
     <div className="flex justify-between">
       <div className="flex flex-col gap-5">
-        <p className="text-[28px] font-medium leading-[34px]">{job.fields.title}</p>
+        <p className="text-[28px] leading-[34px] font-medium">{job.fields.title}</p>
         <div className="flex gap-2">
           {job.fields.tag.map((_tag) => (
             <span
@@ -24,7 +24,7 @@ const Job = ({ job }: { job: JobRecord }) => (
           ))}
         </div>
       </div>
-      <div className="hidden grow justify-end laptop:flex">
+      <div className="laptop:flex hidden grow justify-end">
         <div>
           <Link href={`/career/${job.recordId}`} target="_blank">
             <Button>Details</Button>
@@ -32,7 +32,7 @@ const Job = ({ job }: { job: JobRecord }) => (
         </div>
       </div>
     </div>
-    <p className="text-base text-[#656F6E] laptop:max-w-[70%] laptop:text-lg">{job.fields.jd}</p>
+    <p className="laptop:max-w-[70%] laptop:text-lg text-base text-[#656F6E]">{job.fields.jd}</p>
     <div className="laptop:hidden">
       <Link href={`/career/${job.recordId}`} target="_blank">
         <Button>Details</Button>

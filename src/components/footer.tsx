@@ -7,7 +7,7 @@ import { Container } from './layout/container';
 
 export const Footer = () => (
   <footer>
-    <Container className="hidden laptop:block">
+    <Container className="laptop:block hidden">
       <div className="mb-16 flex">
         <div className="w-1/2">
           <Link href="/">
@@ -34,7 +34,7 @@ export const Footer = () => (
       </div>
 
       <div className="flex justify-between text-sm">
-        <div className="text-sm text-[#646B69]">© 2024 Contek, Ltd All rights reserved</div>
+        <div className="text-sm text-[#646B69]">© 2025 Contek, Ltd All rights reserved</div>
         <nav className="flex gap-4 text-sm text-[#A9ACAC] transition">
           <Link className="hover:opacity-80" href="/privacy" target="_blank">
             Privacy
@@ -46,7 +46,7 @@ export const Footer = () => (
       </div>
     </Container>
 
-    <Container className="flex flex-col laptop:hidden">
+    <Container className="laptop:hidden flex flex-col">
       <div className="flex flex-col items-center gap-8 text-center">
         <Link href="/">
           <Image src="/logo.svg" alt="contek logo" width={132} height={26} />
@@ -77,7 +77,7 @@ export const Footer = () => (
               Terms of use
             </Link>
           </nav>
-          <div className="text-sm text-[#646B69]">© 2024 Contek, Ltd All rights reserved</div>
+          <div className="text-sm text-[#646B69]">© 2025 Contek, Ltd All rights reserved</div>
         </div>
       </div>
     </Container>

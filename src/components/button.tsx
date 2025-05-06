@@ -2,9 +2,9 @@ import type { ReactNode } from 'react';
 
 export const Button = ({ children }: { children?: ReactNode }) => (
   <div>
-    <button className="relative h-[56px] flex justify-center items-center pl-6 pr-16 bg-[#1EA665] rounded-full font-semibold text-lg text-white text-ellipsis overflow-hidden transition hover:opacity-80">
+    <button className="relative flex h-[56px] items-center justify-center overflow-hidden rounded-full bg-[#1EA665] pr-16 pl-6 text-lg font-semibold text-ellipsis text-white transition hover:opacity-80">
       {children}
-      <span className="absolute w-10 h-10 flex flex justify-center items-center bg-[#FFF] top-2 right-2 rounded-full">
+      <span className="absolute top-2 right-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF]">
         <svg
           width="13"
           height="13"
